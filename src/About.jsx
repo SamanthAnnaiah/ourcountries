@@ -8,7 +8,7 @@ export function About() {
         <p className="mb-6 bgshadow rounded-lg p-0">
           <img
             src="/public/wmap.jpeg"
-            alt="Mountain"
+            alt="worldmap"
             className="w-full h-56 object-cover rounded-lg"
           />
         </p>
