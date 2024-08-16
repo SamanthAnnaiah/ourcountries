@@ -53,16 +53,26 @@ export function Filter({ countrydata }) {
   function handlefilterchange(e) {
     console.log(e.target.value);
     let filter = e.target.value.trim();
-    // eslint-disable-next-line react/prop-types
-    let filteredcountries = countrydata.filter(
-      (item) => item.region === filter
-    );
-    setcountryresults((prev) => {
-      prev = [];
-      let curr = prev;
-      curr = [...filteredcountries];
-      return curr;
-    });
-    toast(`${countryresults.length} countries found!`);
+
+    if (filter === "fbrc") {
+      setcountryresults((prev) => {
+        prev = [];
+        let curr = prev;
+        curr = [...countrydata];
+        return curr;
+      });
+    } else {
+      // eslint-disable-next-line react/prop-types
+      let filteredcountries = countrydata.filter(
+        (item) => item.region === filter
+      );
+      setcountryresults((prev) => {
+        prev = [];
+        let curr = prev;
+        curr = [...filteredcountries];
+        return curr;
+      });
+      toast(`${countryresults.length} countries found!`);
+    }
   }
 }
