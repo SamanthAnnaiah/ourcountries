@@ -7,7 +7,7 @@ export function About() {
       <div className="text-lg leading-relaxed text-gray-700">
         <p className="mb-6 bgshadow rounded-lg p-0">
           <img
-            src="/public/wmap.jpeg"
+            src="/wmap.jpeg"
             alt="worldmap"
             className="w-full h-56 object-cover rounded-lg"
           />
